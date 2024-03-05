@@ -4,10 +4,11 @@
     background-color: whitesmoke;
     margin: 0;
     padding: 0;
-    box-sizing: border-box; 
+    box-sizing: border-box;
 }
 
-body, html {
+body,
+html {
     width: 100%;
     height: 100%;
     margin: 0;
@@ -39,7 +40,7 @@ h1 {
     -webkit-text-stroke-color: #DBA946;
     z-index: 1;
     margin-top: -80px;
-    padding: 20px 0;
+    padding: 10px 0;
 }
 
 h2 {
@@ -60,7 +61,7 @@ h3 {
     background-color: transparent;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: #FFEFCF;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 h4 {
@@ -68,6 +69,18 @@ h4 {
     font-size: 20px;
     font-weight: 100;
     color: #305896;
+    background-color: transparent;
+    -webkit-text-stroke-width: 1px;
+    margin-bottom: 15px;
+}
+
+h5 {
+    font-family: "Buenard", serif;
+    font-size: 30px;
+    font-weight: 200;
+    color: #ffffff;
+    text-align: center;
+    margin-top: 100px;
     background-color: transparent;
     -webkit-text-stroke-width: 1px;
     margin-bottom: 15px;
@@ -86,9 +99,41 @@ h4 {
 
 main {
     display: flex;
-    justify-content: space-around;
-    margin: 20px;
+    flex-direction: column;
+    align-items: center;
     padding-bottom: 20px;
+}
+
+.upper-section {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.lower-section {
+    width: 100%;
+    margin-top: 10px;
+}
+
+#friends-list,
+#memory-section,
+#chat-section {
+    flex: 1;
+    margin: 0 10px;
+}
+
+#game-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #FFEFCF;
+    border: solid #FF9BC4 2px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 600px;
+    height: 350px;
+    margin: -300px auto auto auto;
 }
 
 #chat-section {
@@ -98,7 +143,6 @@ main {
     align-items: center;
     background-color: #f4cccc;
     padding: 20px;
-    margin: 10px;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     max-width: 400px;
@@ -238,8 +282,8 @@ main {
 
 #memory-section {
     flex: 2;
-    padding: 20px;
-    margin: 0 10px;
+    padding-top: 0 20px;
+    margin: 5px 20px 20px 20px;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -271,8 +315,14 @@ progress {
 }
 
 @keyframes loadProgress {
-    from { width: 0; }
-    to { width: 80%; }
+    from {
+        width: 0;
+    }
+
+    to {
+        /* updates with current html progress bar, defualt set to 80% */
+        width: var(--progress-width, 80%);
+    }
 }
 
 #memory::after {
@@ -313,4 +363,6 @@ footer {
     border: 1px solid #1362DD;
     width: 100%;
     height: 10vh;
+    position: absolute;
+    bottom: 0;
 }

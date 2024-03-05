@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var chatInput = document.getElementById('chat-input');
     var chatContainer = document.getElementById('chat-messages-container');
 
+    // on the onclick of the send button, "send" the message
     sendButton.addEventListener('click', function() {
         var messageText = chatInput.value.trim();
         if(messageText !== "") {
@@ -28,9 +29,16 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 document.addEventListener('DOMContentLoaded', function() {
+    // grabbing the element by it's id
     var progressBar = document.getElementById('memory');
+    // getting the current bar value for the html page we're on
+    var currentValue = progressBar.value;
+    var currPercentage = currentValue + '%';
+
+    progressBar.style.setProperty('--progress-width', currPercentage);
     setTimeout(function() {
-        progressBar.value = 80;
+        // setting the progressbar value
+        progressBar.value = currentValue;
     }, 100);
 });
 

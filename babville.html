@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Lane</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-content">
+            <img id='header-img' src="./imgs/Road2.jpg" alt="background road image">
+            <div id="date"></div>
+        </div>
+        <h1> Memory Lane </h1>
+    </header>
+    <main>
+        <section id="friends-list">
+            <h2>Friend's List</h2>
+            <ul>
+                <li>mYaSpice</li>
+                <li>MrTurtle14</li>
+                <li>JustinTime7</li>
+                <li>nannynic29</li>
+                <li>squidy627</li>
+                <li>coolkid97</li>
+                <li>snowball123</li>
+            </ul>
+        </section>
+        <section id="memory-section">
+            <h4>Current Memory Storage: <span id="memory-value">20%</span></h4>
+            <progress id="memory" max="100" value="20"></progress>
+        </section>
+        <section id="chat-section">
+            <h3>Chat</h3>
+            <div id="current-chat">
+                Currently chatting with: <span id="current-user">JustinTime7</span>
+            </div>
+            <div id="chat-messages-container">
+                <div class="chat-message sender">Dudeee!! I'm in the town wya?!?!</div>
+                <div class="chat-message receiver">My mom said I gotta hop off :(</div>
+            </div>
+            <div id="input-area">
+                <input type="text" id="chat-input" placeholder="chat a friend...">
+                <button type="button" id="send-btn">Send</button>
+            </div>
+        </section>
+
+    </main>
+    <footer></footer>
+</body>
+
+<script src="./script.js"></script>
+
+</html>
