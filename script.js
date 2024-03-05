@@ -8,6 +8,7 @@ const dateElement = document.getElementById('date');
 // set the date
 dateElement.textContent = dateString;
 
+// send message functionality
 document.addEventListener('DOMContentLoaded', function() {
     var sendButton = document.getElementById('send-btn');
     var chatInput = document.getElementById('chat-input');
@@ -21,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
             messageDiv.textContent = messageText;
             chatContainer.appendChild(messageDiv);
             chatInput.value = '';
-            chatContainer.scrollTop = chatContainer.scrollHeight; // Scroll to the bottom
+            chatContainer.scrollTop = chatContainer.scrollHeight;
         }
     });
 });

@@ -66,6 +66,7 @@ h3 {
 h4 {
     font-family: "Buenard", serif;
     font-size: 20px;
+    font-weight: 100;
     color: #305896;
     background-color: transparent;
     -webkit-text-stroke-width: 1px;
@@ -80,6 +81,7 @@ h4 {
     text-align: left;
     z-index: 1;
     margin-top: -30px;
+    padding-left: 20px;
 }
 
 main {
@@ -207,12 +209,6 @@ main {
     background-color: #55c4f3;
 }
 
-#memory-section {
-    flex: 2;
-    padding: 20px;
-    margin-right: 10px;
-}
-
 #friends-list {
     flex: 1;
     background-color: #cfe2f3;
@@ -240,27 +236,53 @@ main {
     border-bottom: none;
 }
 
+#memory-section {
+    flex: 2;
+    padding: 20px;
+    margin: 0 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    max-width: none;
+}
+
+#memory-section h4 {
+    font-family: "Buenard", serif;
+    font-size: 20px;
+    color: #305896;
+    margin: 0;
+    margin-bottom: 10px;
+    text-align: center;
+    display: flex;
+    align-items: baseline;
+    width: 100%;
+}
+
+#memory-value {
+    margin-left: 245px;
+}
 
 progress {
     width: 100%;
     height: 20px;
     -webkit-appearance: none;
     appearance: none;
+    margin-top: 2px;
 }
 
 progress[value]::-webkit-progress-bar {
-    background-color: #eee;
+    background-color: white;
     border: solid #998989 1px;
     border-radius: 10px;
 }
 
 progress[value]::-webkit-progress-value {
-    background-color: #4caf50;
+    background-color: #9AB7E4;
     border-radius: 10px;
 }
 
 progress[value]::-moz-progress-bar {
-    background-color: #4caf50;
+    background-color: #9AB7E4;
     border-radius: 10px;
 }
 
