@@ -26,3 +26,11 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    var progressBar = document.getElementById('memory');
+    setTimeout(function() {
+        progressBar.value = 80;
+    }, 100);
+});
+

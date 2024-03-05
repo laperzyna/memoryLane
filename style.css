@@ -270,20 +270,33 @@ progress {
     margin-top: 2px;
 }
 
+@keyframes loadProgress {
+    from { width: 0; }
+    to { width: 80%; }
+}
+
+#memory::after {
+    content: '';
+    display: block;
+    height: 100%;
+    background-color: #9AB7E4;
+    border-radius: 10px;
+    animation: loadProgress 2s ease-out forwards;
+    margin-top: -20px;
+}
+
 progress[value]::-webkit-progress-bar {
     background-color: white;
     border: solid #998989 1px;
     border-radius: 10px;
 }
 
-progress[value]::-webkit-progress-value {
-    background-color: #9AB7E4;
-    border-radius: 10px;
+#memory[value]::-webkit-progress-value {
+    background-color: transparent;
 }
 
-progress[value]::-moz-progress-bar {
-    background-color: #9AB7E4;
-    border-radius: 10px;
+#memory[value]::-moz-progress-bar {
+    background-color: transparent;
 }
 
 ul {
