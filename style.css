@@ -160,8 +160,6 @@ main {
     padding: 8px;
     border-radius: 15px;
     line-height: 1.5;
-    margin-right: auto;
-    margin-left: auto;
     width: fit-content;
 }
 
@@ -173,7 +171,7 @@ main {
 }
 
 .receiver {
-    align-self: flex-end;
+    align-self: flex-start;
     background-color: #FFEFCF;
     color: #775b23;
     border-bottom-left-radius: 0;

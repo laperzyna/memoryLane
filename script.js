@@ -7,3 +7,21 @@ const dateElement = document.getElementById('date');
 
 // set the date
 dateElement.textContent = dateString;
+
+document.addEventListener('DOMContentLoaded', function() {
+    var sendButton = document.getElementById('send-btn');
+    var chatInput = document.getElementById('chat-input');
+    var chatContainer = document.getElementById('chat-messages-container');
+
+    sendButton.addEventListener('click', function() {
+        var messageText = chatInput.value.trim();
+        if(messageText !== "") {
+            var messageDiv = document.createElement('div');
+            messageDiv.classList.add('chat-message', 'sender');
+            messageDiv.textContent = messageText;
+            chatContainer.appendChild(messageDiv);
+            chatInput.value = '';
+            chatContainer.scrollTop = chatContainer.scrollHeight; // Scroll to the bottom
+        }
+    });
+});
