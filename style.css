@@ -86,6 +86,18 @@ h5 {
     margin-bottom: 15px;
 }
 
+h6 {
+    font-family: "Buenard", serif;
+    font-size: 30px;
+    font-weight: 200;
+    color: #666666;
+    text-align: center;
+    margin-top: 100px;
+    background-color: transparent;
+    -webkit-text-stroke-width: 1px;
+    margin-bottom: 15px;
+}
+
 #date {
     font-family: "LT Funk", sans-serif;
     font-size: 30px;
@@ -102,6 +114,10 @@ main {
     flex-direction: column;
     align-items: center;
     padding-bottom: 20px;
+}
+
+.grayscale {
+    filter: grayscale(100%);
 }
 
 .upper-section {
@@ -125,6 +141,7 @@ main {
 #game-section {
     display: flex;
     flex-direction: column;
+    position: relative;
     align-items: center;
     background-color: #FFEFCF;
     border: solid #FF9BC4 2px;
@@ -134,6 +151,83 @@ main {
     width: 600px;
     height: 350px;
     margin: -300px auto auto auto;
+}
+
+#game-cp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    height: 400px;
+    background-image: url('./imgs/cp.png');
+    position: relative;
+}
+
+#character-cp {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: transparent;
+    background-image: url('./imgs/penguin.png');
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#game-mm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    height: 600px;
+    background-image: url('./imgs/mm.png');
+    position: relative;
+}
+
+#character-mm {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: transparent;
+    background-image: url('./imgs/poppet.png');
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#game-bab {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    height: 600px;
+    background-image: url('./imgs/mm.png');
+    position: relative;
+}
+
+#character-bab {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: transparent;
+    background-image: url('./imgs/poppet.png');
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    padding: 10px 20px;
+    font-size: 18px;
+}
+
+.left-arrow {
+    left: 0;
+}
+
+.right-arrow {
+    right: 0;
 }
 
 #chat-section {

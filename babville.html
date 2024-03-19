@@ -17,37 +17,47 @@
         <h1> Memory Lane </h1>
     </header>
     <main>
-        <section id="friends-list">
-            <h2>Friend's List</h2>
-            <ul>
-                <li>mYaSpice</li>
-                <li>MrTurtle14</li>
-                <li>JustinTime7</li>
-                <li>nannynic29</li>
-                <li>squidy627</li>
-                <li>coolkid97</li>
-                <li>snowball123</li>
-            </ul>
-        </section>
-        <section id="memory-section">
-            <h4>Current Memory Storage: <span id="memory-value">20%</span></h4>
-            <progress id="memory" max="100" value="20"></progress>
-        </section>
-        <section id="chat-section">
-            <h3>Chat</h3>
-            <div id="current-chat">
-                Currently chatting with: <span id="current-user">JustinTime7</span>
-            </div>
-            <div id="chat-messages-container">
-                <div class="chat-message sender">Dudeee!! I'm in the town wya?!?!</div>
-                <div class="chat-message receiver">My mom said I gotta hop off :(</div>
-            </div>
-            <div id="input-area">
-                <input type="text" id="chat-input" placeholder="chat a friend...">
-                <button type="button" id="send-btn">Send</button>
-            </div>
-        </section>
-
+        <div class="upper-section">
+            <section id="friends-list">
+                <h2>Friend's List</h2>
+                <ul>
+                    <li>mYaSpice</li>
+                    <li>MrTurtle14</li>
+                    <li>JustinTime7</li>
+                    <li>nannynic29</li>
+                    <li>squidy627</li>
+                    <li>coolkid97</li>
+                    <li>snowball123</li>
+                </ul>
+            </section>
+            <section id="memory-section">
+                <h4>Current Memory Storage: <span id="memory-value">20%</span></h4>
+                <progress id="memory" max="100" value="20"></progress>
+            </section>
+            <section id="chat-section">
+                <h3>Chat</h3>
+                <div id="current-chat">
+                    Currently chatting with: <span id="current-user">JustinTime7</span>
+                </div>
+                <div id="chat-messages-container">
+                    <div class="chat-message sender">Dudeee!! I'm in the town wya?!?!</div>
+                    <div class="chat-message receiver">My mom said I gotta hop off :(</div>
+                </div>
+                <div id="input-area">
+                    <input type="text" id="chat-input" placeholder="chat a friend...">
+                    <button type="button" id="send-btn">Send</button>
+                </div>
+            </section>
+        </div>
+        <div class="lower-section">
+            <section id="game-section">
+                <div id="game-bab">
+                    <button class="arrow left-arrow" onclick="moveCharacter('left')">&#8592; Left</button>
+                    <div id="character-bab" class="character"></div>
+                    <button class="arrow right-arrow" onclick="moveCharacter('right')">Right &#8594;</button>
+                </div>
+            </section>
+        </div>
     </main>
     <footer></footer>
 </body>
