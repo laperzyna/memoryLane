@@ -17,7 +17,7 @@ function moveCharacter(direction) {
     // Proceed only if an active character is found
     if (activeCharacter) {
         const step = 50; // Adjust step size as needed
-        let leftPosition = parseInt(activeCharacter.style.left, 10) || 50; // Default to 50 if not set
+        let leftPosition = parseInt(activeCharacter.style.left, 10) || 5; // Default to 50 if not set
 
         switch (direction) {
             case 'left':
