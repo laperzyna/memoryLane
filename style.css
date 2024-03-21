@@ -554,7 +554,8 @@ footer {
     }
 
     #game-section {
-        margin: 2%;
+        margin: 1%;
+        width: 100%;
     }
 }
 
@@ -581,5 +582,9 @@ footer {
     #chat-input, #send-btn {
         width: 90%;
         margin: 5px;
+    }
+    #game-section {
+        margin: 1%;
+        width: 100%;
     }
 }
