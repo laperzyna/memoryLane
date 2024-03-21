@@ -470,7 +470,7 @@ progress {
 
     to {
         /* updates with current html progress bar, defualt set to 80% */
-        width: var(--progress-width, 80%);
+        width: var(--progress-width, 0%);
     }
 }
 
