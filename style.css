@@ -1,4 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Buenard:wght@400;700&display=swap');
+@font-face {
+    font-family: 'LT Funk';
+    src: url('./fonts/LT\ Funk\ 2.otf');
+}
+
+@font-face {
+    font-family: 'Buenard';
+    src: url('./fonts/Buenard-Regular.ttf');
+}
+
 
 * {
     background-color: whitesmoke;
