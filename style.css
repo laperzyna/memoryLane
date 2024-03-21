@@ -516,3 +516,70 @@ footer {
     bottom: 0;
     left: 0;
 }
+
+/* Tablet devices (768px) */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 40px;
+    }
+    header h1 {
+        position: static;
+        transform: none;
+        text-align: right;
+        margin-right: 20px;
+    }
+    .wrapper, .upper-section {
+        flex-direction: column;
+        align-items: center;
+    }
+    #friends-list, #chat-section, #memory-section {
+        margin: 10px 0;
+        width: 90%;
+    }
+
+    .upper-section {
+        flex-direction: column;
+    }
+
+    #friends-list {
+        order: 2;
+    }
+
+    #chat-section {
+        order: 2;
+    }
+
+    #memory-section, #game-section {
+        order: 1;
+    }
+
+    #game-section {
+        margin: 2%;
+    }
+}
+
+/* Mobile devices (480px) */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 32px;
+    }
+    header h1 {
+        text-align: right;
+        font-size: 32px; 
+        margin-right: 10px;
+    }
+
+    h2, h3 {
+        font-size: 24px;
+    }
+    .wrapper, .upper-section {
+        flex-direction: column;
+    }
+    #header-img, #game-section {
+        width: 100%;
+    }
+    #chat-input, #send-btn {
+        width: 90%;
+        margin: 5px;
+    }
+}
