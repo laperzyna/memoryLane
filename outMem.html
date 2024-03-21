@@ -22,10 +22,15 @@
                 <h2>Friend's List</h2>
                 <h5> no current friends</h5>
             </section>
-            <section id="memory-section">
-                <h4>Current Memory Storage: <span id="memory-value">0%</span></h4>
-                <progress id="memory" max="100" value="0"></progress>
-            </section>
+            <div class="wrapper">
+                <section id="memory-section">
+                    <h4>Current Memory Storage: <span id="memory-value">0%</span></h4>
+                    <progress id="memory" max="100" value="0"></progress>
+                </section>
+                <section id="game-section">
+                    <h6> no more memory...</h6>
+                </section>
+            </div>
             <section id="chat-section">
                 <h3>Chat</h3>
                 <div id="current-chat">
@@ -35,17 +40,12 @@
                 </div>
                 <div id="input-area">
                     <input type="text" id="chat-input">
-                    <button type="button" id="send-btn"disabled>Send</button>
+                    <button type="button" id="send-btn" disabled>Send</button>
                 </div>
-            </section>
-        </div>
-        <div class="lower-section">
-            <section id="game-section">
-                <h6> no more memory...</h6>
             </section>
         </div>
     </main>
 
-<script src="./script.js"></script>
+    <script src="./script.js"></script>
 
 </html>
