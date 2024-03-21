@@ -240,15 +240,22 @@ main {
 .arrow {
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
     cursor: pointer;
-    padding: 10px 20px;
-    font-size: 18px;
+    padding: 1.5% 3%;
+    font-size: 30px;
+    font-weight: 200;
+    color: #DBA946;
+    background-color: #FFEFCF;
+    border-radius: 50%;
+    border: solid 1px #DBA946;
 }
 
-.left-arrow {
-    left: 0;
+.arrow:hover {
+    color: #ffe9be;
+    background-color: #ffc248;
+    transition: background-color 0.5s ease;
 }
+
 
 .right-arrow {
     right: 0;
