@@ -1,3 +1,32 @@
+document.addEventListener('DOMContentLoaded', () => {
+    // Check if it's the specific page by checking the body's ID
+    if (document.body.id === 'gray') {
+        turnGrayscale();
+    }
+});
+
+function turnGrayscale() {
+    let grayscaleValue = 0;
+    const interval = 100; // Interval in milliseconds for the effect to progress
+    const duration = 3000; // Total duration in milliseconds for the effect to complete
+    const step = interval / duration; // Calculate step size based on total duration and interval
+
+    const intervalId = setInterval(() => {
+        grayscaleValue += step; // Increment the grayscale value
+        document.body.style.filter = `grayscale(${grayscaleValue * 100}%)`;
+
+        if (grayscaleValue >= 1) {
+            clearInterval(intervalId);
+            if (window.location.pathname.includes('outMem.html')) {
+                const specialActionBtn = document.getElementById('special');
+                specialActionBtn.style.display = 'block';
+                specialActionBtn.style.opacity = 1;
+            }
+        }
+    }, interval);
+}
+
+
 // create a new Date object
 const now = new Date();
 const dateString = now.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
@@ -35,8 +64,6 @@ document.getElementById('right-arrow').addEventListener('click', () => {
     }
 });
 
-
-  
 
 // get the element by ID
 const dateElement = document.getElementById('date');
@@ -77,27 +104,4 @@ document.addEventListener('DOMContentLoaded', function () {
         progressBar.value = currentValue;
     }, 100);
 });
-
-document.addEventListener('DOMContentLoaded', () => {
-    // Check if it's the specific page by checking the body's ID
-    if (document.body.id === 'gray') {
-        turnGrayscale();
-    }
-});
-
-function turnGrayscale() {
-    let grayscaleValue = 0;
-    const interval = 100; // Interval in milliseconds for the effect to progress
-    const duration = 5000; // Total duration in milliseconds for the effect to complete
-    const step = interval / duration; // Calculate step size based on total duration and interval
-
-    const intervalId = setInterval(() => {
-        grayscaleValue += step; // Increment the grayscale value
-        document.body.style.filter = `grayscale(${grayscaleValue * 100}%)`;
-
-        if (grayscaleValue >= 1) {
-            clearInterval(intervalId); // Stop when grayscale reaches 100%
-        }
-    }, interval);
-}
 
