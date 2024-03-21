@@ -8,7 +8,6 @@
     src: url('./fonts/Buenard-Regular.ttf');
 }
 
-
 * {
     background-color: whitesmoke;
     margin: 0;
@@ -16,12 +15,11 @@
     box-sizing: border-box;
 }
 
-body,
-html {
-    width: 100%;
-    height: 100%;
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     margin: 0;
-    padding: 0;
 }
 
 
@@ -120,6 +118,7 @@ h6 {
 
 main {
     display: flex;
+    flex: 1;
     flex-direction: column;
     align-items: center;
     padding-bottom: 20px;
@@ -129,22 +128,36 @@ main {
     filter: grayscale(100%);
 }
 
-.upper-section {
+.wrapper {
     display: flex;
-    justify-content: space-between;
-    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    flex: 2;
 }
 
-.lower-section {
+.upper-section {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
     width: 100%;
-    margin-top: 10px;
+    padding: 2%;
 }
 
 #friends-list,
-#memory-section,
 #chat-section {
     flex: 1;
     margin: 0 10px;
+}
+
+#memory-section {
+    flex: 2;
+    padding: 0 20px;
+    margin: 5px 20px 10px 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
 #game-section {
@@ -154,21 +167,21 @@ main {
     align-items: center;
     background-color: #FFEFCF;
     border: solid #FF9BC4 2px;
-    padding: 20px;
+    padding: 15px;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 600px;
-    height: 350px;
-    margin: -300px auto auto auto;
+    height: 380px;
+    margin-top: 20px;
 }
 
 #game-cp {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 500px;
-    height: 400px;
-    background-image: url('./imgs/cp.png');
+    width: 100%;
+    height: 100%;
+    background-image: url('./imgs/cp.jpg');
     position: relative;
 }
 
@@ -186,9 +199,9 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 500px;
-    height: 600px;
-    background-image: url('./imgs/mm.png');
+    width: 80%;
+    height: 100%;
+    background-image: url('./imgs/mm.jpg');
     position: relative;
 }
 
@@ -208,7 +221,7 @@ main {
     align-items: center;
     width: 500px;
     height: 600px;
-    background-image: url('./imgs/mm.png');
+    /* background-image: url('./imgs/mm.png'); */
     position: relative;
 }
 
@@ -217,7 +230,7 @@ main {
     width: 100px;
     height: 100px;
     background-color: transparent;
-    background-image: url('./imgs/poppet.png');
+    /* background-image: url('./imgs/poppet.png'); */
     left: 50%;
     transform: translateX(-50%);
 }
@@ -465,7 +478,8 @@ footer {
     background-color: #9DDCF7;
     border: 1px solid #1362DD;
     width: 100%;
-    height: 10vh;
-    position: absolute;
+    height: 8vh;
+    position: relative;
     bottom: 0;
+    left: 0;
 }

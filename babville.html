@@ -30,10 +30,19 @@
                     <li>snowball123</li>
                 </ul>
             </section>
-            <section id="memory-section">
-                <h4>Current Memory Storage: <span id="memory-value">20%</span></h4>
-                <progress id="memory" max="100" value="20"></progress>
-            </section>
+            <div class="wrapper">
+                <section id="memory-section">
+                    <h4>Current Memory Storage: <span id="memory-value">20%</span></h4>
+                    <progress id="memory" max="100" value="20"></progress>
+                </section>
+                <section id="game-section">
+                    <div id="game-bab">
+                        <button class="arrow left-arrow" onclick="moveCharacter('left')">&#8592; Left</button>
+                        <div id="character-bab" class="character"></div>
+                        <button class="arrow right-arrow" onclick="moveCharacter('right')">Right &#8594;</button>
+                    </div>
+                </section>
+            </div>
             <section id="chat-section">
                 <h3>Chat</h3>
                 <div id="current-chat">
@@ -46,15 +55,6 @@
                 <div id="input-area">
                     <input type="text" id="chat-input" placeholder="chat a friend...">
                     <button type="button" id="send-btn">Send</button>
-                </div>
-            </section>
-        </div>
-        <div class="lower-section">
-            <section id="game-section">
-                <div id="game-bab">
-                    <button class="arrow left-arrow" onclick="moveCharacter('left')">&#8592; Left</button>
-                    <div id="character-bab" class="character"></div>
-                    <button class="arrow right-arrow" onclick="moveCharacter('right')">Right &#8594;</button>
                 </div>
             </section>
         </div>
